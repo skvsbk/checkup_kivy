@@ -1,0 +1,52 @@
+<LoginScreenView>
+    MDBoxLayout:
+        orientation: "vertical"
+
+        MDFloatLayout:
+
+            MDFillRoundFlatButton:
+                text: "Настройки"
+                on_release: app.manager_screens.current = 'setup screen'
+                pos_hint: {"center_x": .7, "center_y": .9}
+
+            MDBoxLayout:
+                orientation: "vertical"
+                adaptive_height: True
+                size_hint_x: None
+                width: root.width - dp(72)
+                radius: 12
+                padding: "12dp"
+                md_bg_color: 1, 1, 1, .5
+                pos_hint: {"center_x": .5, "center_y": .5}
+
+                MDLabel:
+                    text: "Авторизуйтесь для входа в систему:"
+                    font_style: "H6"
+                    adaptive_height: True
+                    halign: "center"
+
+                MDBoxLayout:
+                    orientation: "vertical"
+                    adaptive_height: True
+                    padding: "10dp"
+                    spacing: "10dp"
+
+                    MDTextField:
+                        id: login_usrname
+                        hint_text: "Имя"
+                        on_text: root.controller.set_user_data("login", self.text)
+
+                    MDTextField:
+                        id: login_passwd
+                        hint_text: "Пароль"
+                        on_text: root.controller.set_user_data("password", self.text)
+
+    MDFillRoundFlatButton:
+        text: "Вход"
+        on_release: root.controller.on_tap_button_login()
+        pos_hint: {"center_x": .7, "center_y": .1}
+
+    MDFillRoundFlatButton:
+        text: "Отмена"
+        on_release: app.stop()
+        pos_hint: {"center_x": .3, "center_y": .1}

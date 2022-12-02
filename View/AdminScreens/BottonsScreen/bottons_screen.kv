@@ -1,0 +1,32 @@
+<BottonsScreenView>
+    MDBoxLayout:
+        orientation: "vertical"
+        adaptive_height: True
+        size_hint_x: None
+        width: root.width - dp(72)
+        # height: root.height - dp(36)
+        radius: 12
+        padding: "12dp"
+        spacing: 50
+        md_bg_color: 1, 1, 1, .5
+        pos_hint: {"center_x": .5, "center_y": .5}
+
+        MDFillRoundFlatButton:
+            text: "Пользователи"
+            on_release: root.controller.on_tap_button_users()
+            pos_hint: {"center_x": .5, "center_y": .9}
+
+        MDFillRoundFlatButton:
+            text: "Точки обхода"
+            on_release: root.controller.on_tap_button_checkpoints()
+            pos_hint: {"center_x": .5, "center_y": .5}
+
+        MDFillRoundFlatButton:
+            text: "Маршруты"
+            on_release: root.controller.on_tap_button_routes()
+            pos_hint: {"center_x": .5, "center_y": .1}
+
+    MDFillRoundFlatButton:
+        text: "Отмена"
+        on_release: app.manager_screens.current = 'login screen'
+        pos_hint: {"center_x": .3, "center_y": .1}
