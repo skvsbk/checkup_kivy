@@ -6,8 +6,8 @@ class DBase:
         # make request to DB with username and password and return dict or None
         query = f'SELECT fio, role FROM users WHERE username={username} AND passwd={password} AND active=1'
         res = self._get_query(query)
-        # return {'username': 'user', 'role': 'user', 'fio': 'Иванов Петр Сергеевич'}
-        return {'user': 'admin', 'role': 'admin', 'fio': 'Administrator'}
+        return {'username': 'user', 'role': 'user', 'fio': 'Иванов Петр Сергеевич'}
+        # return {'user': 'admin', 'role': 'admin', 'fio': 'Administrator'}
         # return None
 
     def get_all_routes(self):

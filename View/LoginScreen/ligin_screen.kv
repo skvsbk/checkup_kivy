@@ -53,12 +53,11 @@
                         MDCheckbox:
                             id: login_checkbox
                             size: "48dp", "48dp"
-                            size_hint_x: None
+                            size_hint: None, None
+                            on_active: root.controller.on_checkbox_active(*args)
 
                         MDLabel:
                             text: "Запомнить"
-
-
 
     MDFillRoundFlatButton:
         text: "Вход"

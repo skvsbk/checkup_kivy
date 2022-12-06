@@ -33,7 +33,7 @@ class LoginScreenModel:
 
         # data = {'user': 'skv', 'password': 'Qwerty123'}
 
-        data = DBase().get_user()
+        data = DBase().get_user('user', 'pass')
         if data['role'] == 'user':
             self.generate_new_screens(View.screens.user_screen)
             return 'choose route screen'

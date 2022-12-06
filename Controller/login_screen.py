@@ -23,3 +23,9 @@ class LoginScreenController:
 
     def reset_data_validation_status(self, *args) -> NoReturn:
         self.model.reset_data_validation_status()
+
+    def on_checkbox_active(self, checkbox, value):
+        if value:
+            print('The checkbox', checkbox, 'is active', 'and', checkbox.state, 'state')
+        else:
+            print('The checkbox', checkbox, 'is inactive', 'and', checkbox.state, 'state')

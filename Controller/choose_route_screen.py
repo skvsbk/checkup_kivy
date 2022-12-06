@@ -9,3 +9,11 @@ class ChooseRouteScreenController:
     def get_view(self) -> ChooseRouteScreenView:
         return self.view
 
+    def on_tap_button_start(self):
+        print('start button')
+
+    def on_checkbox_active(self, checkbox, value):
+        if value:
+            print('The checkbox', checkbox, 'is active', 'and', checkbox.state, 'state')
+        else:
+            print('The checkbox', checkbox, 'is inactive', 'and', checkbox.state, 'state')
