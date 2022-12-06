@@ -44,4 +44,4 @@ class RightCheckbox(IRightBodyTouch, MDCheckbox):
     '''Custom right container.'''
 
     def on_active(self, rcb, value):
-        print(rcb.listItem.text, 'is', value)
+        print(rcb.listItem.id, 'is', value)
