@@ -4,6 +4,7 @@ from kivymd.uix.dialog import MDDialog
 
 from Utility.observer import Observer
 
+
 class SetupScreenView(MDScreen, Observer):
     controller = ObjectProperty()
     model = ObjectProperty()
@@ -15,8 +16,6 @@ class SetupScreenView(MDScreen, Observer):
         self.dialog = MDDialog()
         # load from json:
         self.ids.setup_server_db.text = 'pn-srv01.acticomp.local'
-
-
 
     def model_is_changed(self):
         """

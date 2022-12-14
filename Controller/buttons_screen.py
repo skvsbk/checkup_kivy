@@ -1,12 +1,12 @@
 from typing import NoReturn
-from View.AdminScreens.BottonsScreen.bottons_screen import BottonsScreenView
+from View.AdminScreens.ButtonsScreen.buttons_screen import ButtonsScreenView
 
-class BootonsScreenController:
+class ButtonsScreenController:
     def __init__(self, model):
         self.model = model
-        self.view = BottonsScreenView(controller=self, model=self.model)
+        self.view = ButtonsScreenView(controller=self, model=self.model)
 
-    def get_view(self) -> BottonsScreenView:
+    def get_view(self) -> ButtonsScreenView:
         return self.view
 
     def on_tap_button_users(self) -> NoReturn:

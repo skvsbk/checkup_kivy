@@ -4,7 +4,7 @@ from kivymd.uix.dialog import MDDialog
 
 from Utility.observer import Observer
 
-class BottonsScreenView(MDScreen, Observer):
+class ButtonsScreenView(MDScreen, Observer):
     controller = ObjectProperty()
     model = ObjectProperty()
     manager_screens = ObjectProperty()

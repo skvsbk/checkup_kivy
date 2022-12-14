@@ -32,18 +32,18 @@
                     spacing: "10dp"
 
                     MDTextField:
-                        id: login_usrname
+                        id: login_username
                         hint_text: "Имя"
-                        on_text: root.controller.set_user_data("login", self.text)
+                        on_text: root.controller.set_user_data("user", self.text)
 
                     MDTextField:
                         id: login_passwd
                         hint_text: "Пароль"
+                        password: True
                         on_text: root.controller.set_user_data("password", self.text)
 
                     MDBoxLayout:
                         orientation: "horizontal"
-
                         adaptive_height: True
                         padding: "10dp"
                         size_hint_x: None

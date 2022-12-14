@@ -8,6 +8,8 @@ from View.screens import main_screen, user_screen, admin_screen
 Config.set("graphics", "height", "760")
 Config.set("graphics", "width", "320")
 
+
+
 class CheckupApp(MDApp):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)

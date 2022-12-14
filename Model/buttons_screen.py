@@ -1,4 +1,4 @@
-class BottonsScreenModel:
+class ButtonsScreenModel:
     def __init__(self):
         self._observers = []
 

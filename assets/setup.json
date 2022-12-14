@@ -1,1 +1,6 @@
-1
+{
+  "server": "pn-srv-01.acticomp.local",
+  "database": "checkup",
+  "user": "admin",
+  "password": "12345"
+}

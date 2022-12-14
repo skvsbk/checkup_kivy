@@ -6,8 +6,8 @@ from Model.setup_screen import SetupScreenModel
 from Controller.setup_screen import SetupScreenController
 
 # Admin screens
-from Model.bottons_screen import BottonsScreenModel
-from Controller.bottons_screen import BootonsScreenController
+from Model.buttons_screen import ButtonsScreenModel
+from Controller.buttons_screen import ButtonsScreenController
 
 from Model.manage_users_screen import ManageUsersScreenModel
 from Controller.manage_users_screen import ManageUsersScreenController
@@ -39,9 +39,9 @@ main_screen = {
 }
 
 admin_screen = {
-    "bottons screen": {
-        "model": BottonsScreenModel,  # class of model
-        "controller": BootonsScreenController,  # class of controller
+    "buttons screen": {
+        "model": ButtonsScreenModel,  # class of model
+        "controller": ButtonsScreenController,  # class of controller
     },
     "manage users screen": {
         "model": ManageUsersScreenModel,  # class of model
