@@ -9,7 +9,10 @@ class SetupScreenController:
     def get_view(self) -> SetupScreenView:
         return self.view
 
-    def on_tap_button_save(self):
-        #Todo: save to json in Model side
+    def on_tap_button_save(self) -> NoReturn:
 
-        self.view.manager_screens.current = 'login screen'
+        screen_name = self.model.save_button()
+        self.view.manager_screens.current = screen_name
+
+    def set_server_data(self, key, value) -> NoReturn:
+        self.model.set_server_data(key, value)

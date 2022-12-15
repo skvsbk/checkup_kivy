@@ -15,7 +15,12 @@ class SetupScreenView(MDScreen, Observer):
         self.model.add_observer(self)
         self.dialog = MDDialog()
         # load from json:
-        self.ids.setup_server_db.text = 'pn-srv01.acticomp.local'
+
+        if self.model.server_data != {}:
+            self.ids.setup_server_db.text = self.model.server_data['db_server']
+            self.ids.setup_name_db.text = self.model.server_data['db_name']
+            self.ids.setup_username_db.text = self.model.server_data['db_username']
+            self.ids.setup_passwd_db.text = self.model.server_data['db_password']
 
     def model_is_changed(self):
         """

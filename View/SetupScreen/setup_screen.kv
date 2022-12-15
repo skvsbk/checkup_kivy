@@ -29,22 +29,22 @@
                     MDTextField:
                         id: setup_server_db
                         hint_text: "Сервер БД"
-                        on_text: pass
+                        on_text: root.controller.set_server_data("db_server", self.text)
 
                     MDTextField:
                         id: setup_name_db
                         hint_text: "Имя БД"
-                        on_text: pass
+                        on_text: root.controller.set_server_data("db_name", self.text)
 
                     MDTextField:
                         id: setup_username_db
                         hint_text: "Пользователь"
-                        on_text: pass
+                        on_text: root.controller.set_server_data("db_username", self.text)
 
                     MDTextField:
                         id: setup_passwd_db
                         hint_text: "Пароль"
-                        on_text: pass
+                        on_text: root.controller.set_server_data("db_password", self.text)
 
     MDFillRoundFlatButton:
         text: "Запомнить"

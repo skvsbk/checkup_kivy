@@ -23,3 +23,8 @@ class SetupScreenModel:
         """Sets a dictionary of data that the user enters."""
 
         self.server_data[key] = value
+
+    def save_button(self):
+        self.json_file.save_to_json(self.server_data)
+
+        return 'login screen'
