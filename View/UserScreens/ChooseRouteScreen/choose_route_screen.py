@@ -1,14 +1,15 @@
 from kivy.properties import ObjectProperty, StringProperty
 from kivymd.uix.screen import MDScreen
-from kivymd.uix.dialog import MDDialog
+# from kivymd.uix.dialog import MDDialog
 from kivymd.uix.list import IRightBodyTouch, OneLineAvatarIconListItem
 from kivymd.uix.selectioncontrol import MDCheckbox
-from kivymd.uix.boxlayout import MDBoxLayout
-from kivymd.uix.label.label import MDLabel
-from kivymd.uix.list.list import MDList
+# from kivymd.uix.boxlayout import MDBoxLayout
+# from kivymd.uix.label.label import MDLabel
+# from kivymd.uix.list.list import MDList
 
 from Utility.dbase import DBase
 from Utility.observer import Observer
+
 
 class ChooseRouteScreenView(MDScreen, Observer):
     controller = ObjectProperty()
@@ -32,16 +33,18 @@ class ChooseRouteScreenView(MDScreen, Observer):
         The method that will be called on the observer when the model changes.
         """
 
+
 class ListItemWithCheckbox(OneLineAvatarIconListItem):
-    '''Custom list item.'''
+    """Custom list item."""
     controller = ObjectProperty()
     model = ObjectProperty()
     manager_screens = ObjectProperty()
 
     icon = StringProperty("android")
 
-class RightCheckbox(IRightBodyTouch, MDCheckbox):
-    '''Custom right container.'''
 
-    def on_active(self, rcb, value):
-        print(rcb.listItem.id, 'is', value)
+class RightCheckbox(IRightBodyTouch, MDCheckbox):
+    """Custom right container."""
+
+    # def on_active(self, checkbox, value):
+    #     print(checkbox.listItem.id, 'is', value)

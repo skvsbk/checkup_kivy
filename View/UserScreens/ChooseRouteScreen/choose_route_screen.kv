@@ -20,7 +20,7 @@
 
             MDFillRoundFlatButton:
                 text: "Отмена"
-                on_release: app.manager_screens.current = 'login screen'
+                on_release: root.controller.on_tap_button_cancel()
                 pos_hint: {"center_x": .3, "center_y": .1}
 
             MDFillRoundFlatButton:

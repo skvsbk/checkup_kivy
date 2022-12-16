@@ -24,6 +24,6 @@ class LoginScreenController:
     # def reset_data_validation_status(self, *args) -> NoReturn:
     #     self.model.reset_data_validation_status()
 
-    def on_checkbox_active(self, value) -> NoReturn:
-        self.model.set_user_data('save', int(value))
+    def on_checkbox_active(self, *args) -> NoReturn:
+        self.model.set_user_data('save', int(args[1]))
 

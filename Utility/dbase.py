@@ -15,12 +15,12 @@ class DBase:
         res = self._get_query(query)
         return [{'number': '1', 'description': 'Обход технологического этажа'},
                 {'number': '2', 'description': 'Обход 1, 2, 3 участков'},
-                {'number': '3', 'description': 'Обход водоподготовки'},
-                {'number': '4', 'description': 'Обход всех участков, ВП, тех.этажа'},
+                {'number': '4', 'description': 'Обход водоподготовки'},
+                {'number': '7', 'description': 'Обход всех участков, ВП, тех.этажа'},
                 ]
 
-    def get_checkpoints(self):
-        query = f'SELECT name, nfc FROM checkpoints WHERE active=1'
+    def get_checkpoints(self, id):
+        query = f'SELECT name, nfc FROM checkpoints WHERE active=1 and id=id'
         res = self._get_query(query)
         return [{'name': '1.004', 'nfc': '04ac78'},
                 {'name': '1.038', 'nfc': '02ac67'},
@@ -29,7 +29,7 @@ class DBase:
                 {'name': '2.017', 'nfc': '07ac34'},
                 ]
 
-    def get_checkpoints_for_routes(self):
+    def get_checkpoints_for_routes(self, id):
         query = f'SELECT step, name, nfc FROM routes WHERE active=1 ORDER BY step'
         res = self._get_query(query)
         return [{'step': '1', 'name': '1.004', 'nfc': '04ac78'},

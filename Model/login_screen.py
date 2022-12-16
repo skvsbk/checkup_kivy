@@ -14,8 +14,6 @@ class LoginScreenModel:
         if json_data != {}:
             self.user_data.update(json_data)
 
-
-
     def notify_observers(self):
         """
         The method that will be called on the observer when the model changes.
@@ -66,9 +64,10 @@ class LoginScreenModel:
 
     def generate_new_screens(self, screens):
         for name_screen in screens:
-            model = screens[name_screen]["model"]()
-            controller = screens[name_screen]["controller"](model)
-            view = controller.get_view()
-            view.manager_screens = self._observers[0].manager_screens
-            view.name = name_screen
-            self._observers[0].manager_screens.add_widget(view)
+            if name_screen not in self._observers[0].manager_screens.screen_names:
+                model = screens[name_screen]["model"]()
+                controller = screens[name_screen]["controller"](model)
+                view = controller.get_view()
+                view.manager_screens = self._observers[0].manager_screens
+                view.name = name_screen
+                self._observers[0].manager_screens.add_widget(view)
